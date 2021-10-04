@@ -1,3 +1,7 @@
+# Dicionário para PYTHON/ProjetoLoginHash/LoginHash.py
+
+# Dictionary for PYTHON/ProjectLoginHash/LoginHash.py
+
 usuarios = []
 
 usuario = {
