@@ -8,7 +8,7 @@
 # Even though the data is encrypted in sha256.
 # With that, we have in the application below the example of the entire process in operation.
 
-from users import *
+from Users import *
 from hashlib import sha256
 
 x = 0
@@ -18,12 +18,12 @@ senha = input("Digite sua senha: ")
 
 senha = (sha256(senha.encode('utf-8')).hexdigest())
 
-for i in users:
+for i in Users:
   if username in i['username'] == username and senha in i['password'] == senha:
     x = x + 1
     print("{} logado!".format(i['name']))
 
-for i in users:
+for i in Users:
   if (username not in i['username'] or senha not in i['password']):
     while (x<1):
       print("Usuário/Senha inválidos!")
