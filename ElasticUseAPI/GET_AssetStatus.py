@@ -4,8 +4,7 @@ from elasticsearch import Elasticsearch
 # Cria uma conexão com o Elasticsearch
 es = Elasticsearch(
     ['https://cybersec.domain.com.br:9200/.fleet-agents/'],
-    http_auth=('user', 'pass'),
-    verify_certs=False
+    http_auth=('user', 'pass')
 )
 
 # Define host de consulta
