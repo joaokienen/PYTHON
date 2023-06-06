@@ -10,7 +10,7 @@ es = Elasticsearch(
 # Define host de consulta
 host = 'cpanel09-idc.domain.com.br'
 
-# Define a consulta
+# Define a consulta de query EXATA
 query = {
   "_source": ["last_checkin_status"],
   "size": 10,
@@ -28,6 +28,21 @@ query = {
     }
   }
 }
+
+# Define a consulta de query APROXIMADA
+"""
+query = {
+  "_source": ["last_checkin_status"],
+  "size": 2,
+  "query": {
+      "wildcard": {
+      "local_metadata.host.hostname.keyword": {
+        "value": f"*{host}*"
+      }
+    }
+  }
+}
+"""
 
 # Realiza a consulta
 response = es.search(body=query)
