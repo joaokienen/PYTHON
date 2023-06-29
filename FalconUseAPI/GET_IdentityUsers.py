@@ -113,6 +113,7 @@ for i in identis:
     list1 = [item for item in b['associations'] if 'entity' in item]
     for j in list1:
       c = (j and j['entity'] and j['entity']['secondaryDisplayName']) or 'None'
+      group.append(c)
       if a == c:
         x = True
     list2 = [item for item in b['associations'] if 'accountName' in item] or {'accountName': 'None'}
@@ -121,6 +122,8 @@ for i in identis:
       group.append(g)
   d = i['accounts'][0]
   e = d['passwordAttributes']
+  removes = ['dsk-uni', 'item', a]
+  group_ = [item for item in group if not any(remove in item for remove in removes)]
   identity.append({ 
     'Domain': d['domain'] or 'None',
     'Usuário': a, 
@@ -133,7 +136,7 @@ for i in identis:
     'Senha Vencida?': e['aged'],
     'Senha Exposta?': e['exposed'],
     'RiskScore': i['riskScore'],
-    'Other Users LocalAdmin in Machine': group
+    'Other Users LocalAdmin in Machine': group_
   })
 # No fim, a lista [ identity ] está alimentada
 
