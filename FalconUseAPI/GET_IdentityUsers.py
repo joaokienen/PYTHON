@@ -19,6 +19,7 @@ query ($after: Cursor) {
           ... on EntityAssociation {
             entity {
               primaryDisplayName 
+              isServer: hasRole(type: ServerRole)
               associations(bindingTypes: [LOCAL_ADMINISTRATOR]) {
                 ... on LocalAdminLocalUserAssociation {
                   accountName
@@ -107,25 +108,37 @@ for i in identis:
   group = []
   x = False
   a = i['secondaryDisplayName']
-  b = (i['associations'] and i['associations'][0]['entity'])
-  machine = (b and b['primaryDisplayName']) or 'None'
-  if b and b['associations']:
-    list1 = [item for item in b['associations'] if 'entity' in item]
-    for j in list1:
-      c = (j and j['entity'] and j['entity']['secondaryDisplayName']) or 'None'
-      group.append(c)
-      if a == c:
-        x = True
-    list2 = [item for item in b['associations'] if 'accountName' in item] or {'accountName': 'None'}
-    for k in list2:
-      g = k['accountName']
-      if g in a:
-        x = True
-      group.append(g)
+  machine = []
+
+  for n in i['associations']:
+    b = (n['entity'])
+
+    if b['isServer'] == False:
+      machine_ = (b and b['primaryDisplayName']) or 'None'
+      machine.append(machine_)
+
+      if b and b['associations']:
+        list1 = [item for item in b['associations'] if 'entity' in item]
+        for j in list1:
+          c = (j and j['entity'] and j['entity']['secondaryDisplayName']) or 'None'
+          group.append(c)
+          if a == c:
+            x = True
+
+        list2 = [item for item in b['associations'] if 'accountName' in item] or {'accountName': 'None'}
+        for k in list2:
+          g = k['accountName']
+          if g in a:
+            x = True
+          else:
+            group.append(g)
+
   d = i['accounts'][0]
   e = d['passwordAttributes']
-  removes = ['dsk-uni', 'item', a]
+  removes = ['dsk-uni', 'TIO-IDC-TI-SUPORTE-ALLOW', a, 'Domain Admins']
   group_ = [item for item in group if not any(remove in item for remove in removes)]
+  group_ = list(set(group_))
+
   identity.append({ 
     'Domain': d['domain'] or 'None',
     'Usuário': a, 
@@ -167,3 +180,4 @@ with open(_dir_csv, "w", newline="", encoding="utf-8") as f:
   writer = csv.DictWriter(f, fieldnames=csv_data[0].keys())
   writer.writeheader()
   writer.writerows(csv_data)
+
