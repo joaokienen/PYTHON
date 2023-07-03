@@ -119,6 +119,8 @@ for i in identis:
     list2 = [item for item in b['associations'] if 'accountName' in item] or {'accountName': 'None'}
     for k in list2:
       g = k['accountName']
+      if g in a:
+        x = True
       group.append(g)
   d = i['accounts'][0]
   e = d['passwordAttributes']
