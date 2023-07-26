@@ -1,5 +1,9 @@
 # PYTHON
 
+>__DelineaUseAPI__: _Uso de API [ delinea ] para consultas [ GET, DELETE... ]._
+
+-------------------------
+
 >__ElasticUseAPI__: _Uso de API [ elastic ] para consultas [ GET, DELETE... ]._
 
 -------------------------
