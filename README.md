@@ -1,5 +1,9 @@
 # PYTHON
 
+>__DataAnalytics__: _Uso de modelos de Machine learning para referência de dados._
+
+-------------------------
+
 >__DelineaUseAPI__: _Uso de API [ delinea ] para consultas [ GET, DELETE... ]._
 
 -------------------------
