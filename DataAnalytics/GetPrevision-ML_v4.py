@@ -84,6 +84,7 @@ plt.title('Gráfico de Referência Linear')
 plt.grid(True)
 plt.ylim(min(y) - 0.5, max(y) + 0.5)
 plt.xticks(rotation=45)
+plt.legend()
 plt.savefig('grafico_referencia_linear.png', bbox_inches='tight')
 '''
 
@@ -97,6 +98,7 @@ plt.title('Gráfico de Dispersão Linear')
 plt.grid(True)
 plt.ylim(min(y) - 0.5, max(y) + 0.5)
 plt.xticks(rotation=45)
+plt.legend()
 plt.savefig('grafico_dispersao_linear.png', bbox_inches='tight')
 '''
 # --
