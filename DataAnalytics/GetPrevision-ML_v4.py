@@ -10,7 +10,7 @@ from sklearn.linear_model import LinearRegression
 # --------> Parte 0: Configuração de Ambiente
 # --
 # Define o símbolo da ação que você deseja recuperar os dados
-symbol = 'FIQE3.SA'
+symbol = 'NAME.SA'
 
 # Calcula o tempo de dados que iremos recuperar
 end_date = datetime.now()
@@ -55,7 +55,7 @@ results_df = pd.DataFrame({'Previsão': y_pred, 'Real': y})
 score = model.score(X, y)
 a = score * 100
 b = f'{a:.0f}%'
-#print('Acurácia do modelo:', b)
+print('Acurácia do modelo:', b)
 
 # Define váriavel para obtenção de Datas, para utilização em gráficos
 dates = stock_data.index.strftime('%d/%m')
