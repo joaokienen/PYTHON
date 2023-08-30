@@ -81,8 +81,10 @@ plt.plot(dates, y_pred, linestyle='--', color='blue', label='Valores preditivos'
 plt.plot(dates, y, color='red', label='Valores reais')
 plt.ylabel('Valores por ação')
 plt.title('Gráfico de Referência Linear')
-plt.legend()
-plt.savefig('grafico_referencia_linear.png')
+plt.grid(True)
+plt.ylim(min(y) - 0.5, max(y) + 0.5)
+plt.xticks(rotation=45)
+plt.savefig('grafico_referencia_linear.png', bbox_inches='tight')
 '''
 
 
@@ -92,8 +94,10 @@ plt.savefig('grafico_referencia_linear.png')
 plt.scatter(y, y_pred, color='blue', label='Previsões')
 plt.plot([min(y), max(y)], [min(y), max(y)], linestyle='--', color='red', label='Linha de apoio')
 plt.title('Gráfico de Dispersão Linear')
-plt.legend()
-plt.savefig('grafico_dispersao_linear.png')
+plt.grid(True)
+plt.ylim(min(y) - 0.5, max(y) + 0.5)
+plt.xticks(rotation=45)
+plt.savefig('grafico_dispersao_linear.png', bbox_inches='tight')
 '''
 # --
 # --------> Parte 1: Tratamento de dados históricos, acuracidade e gráficos
