@@ -24,6 +24,10 @@
 
 -------------------------
 
+>__SocketConnect__: _Método de conexão em servidor para obter ou alterar informações do ambiente, como código de cliente e servidor._
+
+-------------------------
+
 >__TenableUseAPI__: _Uso de API [ tenable ] para consultas [ GET, DELETE... ]._
 
 
