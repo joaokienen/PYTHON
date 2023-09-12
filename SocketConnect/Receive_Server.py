@@ -76,7 +76,8 @@ while True:
             if file_request == item_log_file and identifer == identd:
                 with open(item_log_file, 'rb') as file:
                     file_content = file.read()
-                server_socket.sendto(file_content, client_address)
+                file = ''.join(file_content.split())
+                server_socket.sendto(file, client_address)
             else:
                 error_message = "Error_404_or_401"
                 server_socket.sendto(error_message.encode(), client_address)
