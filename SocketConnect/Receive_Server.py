@@ -43,7 +43,11 @@ signal.signal(signal.SIGINT, shutdown_server)
 
 # Valida se diretório existe
 if not os.path.exists(item_log_file):
-    os.makedirs(item_log_file)
+    with open(item_log_file, 'w') as arquivo:
+        pass
+
+# O arquivo é automaticamente fechado quando o bloco "with" termina
+
 
 
 
