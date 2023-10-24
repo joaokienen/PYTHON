@@ -16,6 +16,10 @@
 
 -------------------------
 
+>__GoogleBigQuery__: _Realizado manipulação de dados provindo do módulo BigQuery from GCP._
+
+-------------------------
+
 >__ProjectGetHash__: _Consulta [ POST ] básica em url._
 
 -------------------------
