@@ -16,7 +16,7 @@
 
 -------------------------
 
->__GoogleBigQuery__: _Realizado manipulação de dados provindo do módulo BigQuery from GCP._
+>__GoogleBigQuery__: _Realizado manipulação de dados provindos do módulo BigQuery from GCP._
 
 -------------------------
 
