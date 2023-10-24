@@ -29,21 +29,21 @@ credentials = service_account.Credentials.from_service_account_file(
 
 # --------> Parte 1: Criação de funções + dicionários
 
-# Criado valores conforme planilha de dicionário que foi disponibilizada
+# Criado valores conforme planilha de dicionários que foi disponibilizada
 uf = {11:'Rondônia',12:'Acre',13:'Amazonas',14:'Roraima',15:'Pará',16:'Amapá',17:'Tocantins',21:'Maranhão',22:'Piauí',23:'Ceará',24:'Rio Grande do Norte',25:'Paraíba',26:'Pernambuco',27:'Alagoas',28:'Sergipe',29:'Bahia',31:'Minas Gerais',32:'Espírito Santo',33:'Rio de Janeiro',35:'São Paulo',41:'Paraná',42:'Santa Catarina',43:'Rio Grande do Sul',50:'Mato Grosso do Sul',51:'Mato Grosso',52:'Goiás',53:'Distrito Federal'}
 # Realizado função com base em dicionário anterior
 def ufr(param):
     estado = uf[param]
     return estado
 
-# Criado valores conforme planilha de dicionário que foi disponibilizada
+# Criado valores conforme planilha de dicionários que foi disponibilizada
 sexo = {1:'Homem',2:'Mulher'}
 # Realizado função com base em dicionário anterior
 def sexor(param):
     genero = sexo[param]
     return genero
 
-# Criado valores conforme planilha de dicionário que foi disponibilizada
+# Criado valores conforme planilha de dicionários que foi disponibilizada
 quests_1 = {1:'Sim',2:'Não',3:'Não sabe',9:'Ignorado'}
 # Realizado função com base em dicionário anterior
 def quests_1r(param):
@@ -53,7 +53,7 @@ def quests_1r(param):
         quests = quests_1[param]
     return quests
 
-# Criado valores conforme planilha de dicionário que foi disponibilizada
+# Criado valores conforme planilha de dicionários que foi disponibilizada
 escolaridade = {1:'Sem instrução',2:'Fundamental incompleto',3:'Fundamental completa',4:'Médio incompleto',5:'Médio completo',6:'Superior incompleto',7:'Superior completo',8:'Pós-graduação, mestrado ou doutorado'}
 # Realizado função com base em dicionário anterior
 def escolaridader(param):
@@ -77,7 +77,7 @@ for consult in list_var:
     # Define variável de dicionário que logo será alimentada 
     dic = ''
 
-    # Os dois primeiros meses possem dicinários na mesma ordem, sendo assim, essa será a base:
+    # Os dois primeiros meses possuem dicionários na mesma ordem, sendo assim, essa será a base:
     if consult == '05_2020' or consult == '06_2020':
         dic = {'Ano': 0, 'UF': 1, 'CAPITAL': 2, 'RM_RIDE': 3, 'V1008': 4, 'V1012': 5, 'V1013': 6, 'V1016': 7, 'Estrato': 8, 'UPA': 9, 'V1022': 10, 'V1023': 11, 'V1030': 12, 'V1031': 13, 'V1032': 14, 'posest': 15, 'A001': 16, 'A001A': 17, 'A001B1': 18, 'A001B2': 19, 'A001B3': 20, 'A002': 21, 'A003': 22, 'A004': 23, 'A005': 24, 'B0011': 25, 'B0012': 26, 'B0013': 27, 'B0014': 28, 'B0015': 29, 'B0016': 30, 'B0017': 31, 'B0018': 32, 'B0019': 33, 'B00110': 34, 'B00111': 35, 'B00112': 36, 'B002': 37, 'B0031': 38, 'B0032': 39, 'B0033': 40, 'B0034': 41, 'B0035': 42, 'B0036': 43, 'B0037': 44, 'B0041': 45, 'B0042': 46, 'B0043': 47, 'B0044': 48, 'B0045': 49, 'B0046': 50, 'B005': 51, 'B006': 52, 'B007': 53, 'C001': 54, 'C002': 55, 'C003': 56, 'C004': 57, 'C005': 58, 'C0051': 59, 'C0052': 60, 'C0053': 61, 'C006': 62, 'C007': 63, 'C007A': 64, 'C007B': 65, 'C007C': 66, 'C007D': 67, 'C007E': 68, 'C007E1': 69, 'C007E2': 70, 'C008': 71, 'C009': 72, 'C010': 73, 'C0101': 74, 'C01011': 75, 'C01012': 76, 'C0102': 77, 'C01021': 78, 'C01022': 79, 'C0103': 80, 'C0104': 81, 'C011A': 82, 'C011A1': 83, 'C011A11': 84, 'C011A12': 85, 'C011A2': 86, 'C011A21': 87, 'C011A22': 88, 'C012': 89, 'C013': 90, 'C014': 91, 'C015': 92, 'C016': 93, 'C017A': 94, 'D0011': 95, 'D0013': 96, 'D0021': 97, 'D0023': 98, 'D0031': 99, 'D0033': 100, 'D0041': 101, 'D0043': 102, 'D0051': 103, 'D0053': 104, 'D0061': 105, 'D0063': 106, 'D0071': 107, 'D0073': 108, 'F001': 109, 'F0021': 110, 'F0022': 111, 'F0061': 112, 'F006': 113}
 
@@ -99,7 +99,6 @@ for consult in list_var:
         f'SELECT * FROM `rm348777.Fase_3.{consult}` '
         'LIMIT 1')
     query_job = client.query(QUERY)
-    query_job.use_query_cache = True
     rows = query_job.result()
 
     # Cria lista para receber novos resultados tratados
