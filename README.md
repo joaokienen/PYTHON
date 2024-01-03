@@ -1,5 +1,9 @@
 # PYTHON
 
+>__AceleratoUseAPI__: _Uso de API [ acelerato ] para consultas [ GET, DELETE... ]._
+
+-------------------------
+
 >__DataAnalytics__: _Uso de modelos de Machine learning para referência de dados._
 
 -------------------------
