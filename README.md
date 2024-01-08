@@ -32,11 +32,11 @@
 
 -------------------------
 
->__Streamlits__: _Projetos para visualização de dados._
+>__SocketConnect__: _Método de conexão em servidor para obter ou alterar informações do ambiente, como código de cliente e servidor._
 
 -------------------------
 
->__SocketConnect__: _Método de conexão em servidor para obter ou alterar informações do ambiente, como código de cliente e servidor._
+>__Streamlits__: _Projetos para visualização de dados._
 
 -------------------------
 
