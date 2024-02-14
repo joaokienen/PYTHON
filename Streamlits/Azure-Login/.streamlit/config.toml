@@ -1,2 +1,21 @@
 [theme]
 base="dark"
+primaryColor="#ad3333"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+port = 4000
+enableCORS = true
+enableXsrfProtection = true
+maxUploadSize = 200
+maxMessageSize = 200
+# sslCertFile = '/home/main/Streamlit/.streamlit/Certs/domain.com.br.pem'
+# sslKeyFile = '/home/main/Streamlit/.streamlit/Certs/privatekey-domain.com.br.key'
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+fastReruns = true
