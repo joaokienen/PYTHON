@@ -32,6 +32,10 @@
 
 -------------------------
 
+>__SecuronixUseAPI__: Uso de API [ securonix ] para consultas [ GET, DELETE... ]._
+
+-------------------------
+
 >__SocketConnect__: _Método de conexão em servidor para obter ou alterar informações do ambiente, como código de cliente e servidor._
 
 -------------------------
