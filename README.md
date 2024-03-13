@@ -20,6 +20,10 @@
 
 -------------------------
 
+>__Functions__: _Funções com pipelines prontas para utilização._
+
+-------------------------
+
 >__GoogleBigQuery__: _Realizado manipulação de dados provindos do módulo BigQuery from GCP._
 
 -------------------------
