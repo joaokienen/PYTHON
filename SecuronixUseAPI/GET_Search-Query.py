@@ -24,4 +24,5 @@ def search_spotter(BASE_URL, token):
     response = requests.get(url, params=query_parameters, headers=headers)
     print(response.text)
 
+# Call the function to get query results
 search_spotter(BASE_URL, TOKEN)
