@@ -13,7 +13,6 @@ import requests
 def generate_token(BASE_URL, token):
     url = f"{BASE_URL}/ws/token/generate"
     
-    # Set headers for the request including username, password, and validity of the token
     headers = {
         "username": USER_ID,  
         "password": PASS_ID,   
