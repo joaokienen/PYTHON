@@ -28,6 +28,10 @@
 
 -------------------------
 
+>__NetskopeUseAPI__: _Uso de API [ netskope ] para consultas [ GET, DELETE... ]._
+
+-------------------------
+
 >__ProjectGetHash__: _Consulta [ POST ] básica em url._
 
 -------------------------
