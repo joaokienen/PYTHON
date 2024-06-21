@@ -40,11 +40,12 @@ def get_netskope_users(tenant_url, api_token):
     devices = []
 
     for i in response.json()['data']:
+        user_os = i['attributes']['host_info']['os']
         user_device = i['attributes']['host_info']['hostname']
         user_name = i['attributes']['users'][0]['username']
-        devices.append({'Device': user_device, 'User': user_name})
+        devices.append({'Type': user_os, 'Device': user_device, 'User': user_name})
     
-    # print(devices)
+    print(devices)
 
 # --->
 
