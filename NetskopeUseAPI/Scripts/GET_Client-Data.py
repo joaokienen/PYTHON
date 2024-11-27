@@ -43,7 +43,8 @@ def get_netskope_users(tenant_url, api_token):
         user_os = i['attributes']['host_info']['os']
         user_device = i['attributes']['host_info']['hostname']
         user_name = i['attributes']['users'][0]['username']
-        devices.append({'Type': user_os, 'Device': user_device, 'User': user_name})
+        status = i['attributes']['last_event']['status_v2']
+        devices.append({'Type': user_os, 'Device': user_device, 'User': user_name, 'Status': status})
     
     print(devices)
 
