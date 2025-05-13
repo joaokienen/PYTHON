@@ -54,4 +54,8 @@
 
 >__TenableUseAPI__: _Uso de API [ tenable ] para consultas [ GET, DELETE... ]._
 
+-------------------------
+
+>__WazuhUseAPI__: _Uso de API [ wazuh ] para consultas [ GET, DELETE... ]._
+
 
