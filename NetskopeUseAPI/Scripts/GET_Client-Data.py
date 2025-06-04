@@ -19,8 +19,8 @@ from delinea.secrets.vault import (
 current_dir = os.path.dirname(os.path.realpath(__file__))
 env_path = os.path.join(current_dir, f"./.env")
 
-timestamp = datetime.now().timestamp()
-timestamp_previous = (datetime.now() - timedelta(days=30)).timestamp()
+timestamp = int(datetime.now().timestamp())
+timestamp_previous = int((datetime.now() - timedelta(days=30)).timestamp())
 # ---> 
 
 
